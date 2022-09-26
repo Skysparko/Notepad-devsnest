@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="keywords" content="">
+    <meta name="description" content=""> -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <main id="main">
+        <aside id="new" tabindex="0">
+            
+            <!-- <input type="search" name="search" id="search"> -->
+                <h1 id="test">Click '+' for new note</h1>
+                <button type="button" id="add">+</button>
+        </aside>
+        <div id="front">
+            <form action="" id="form" method="post">
+                <label for="topic">Please enter your topic name</label>
+                <input type="text" name="topic" placeholder="Your note's topic name" id="topic" required onkeydown="return event.key != 'Enter';"/>
+                <button type="button" id="submit">Submit</button>
+            </form>
+        </div>
+        <!-- <section id="nofile">
+            <h1>Create New file</h1>
+        </section> -->
+        <section id="nofile1" class="main_section">
+            <span id="card_btn">
+                <span id="format">
+                    <button type="button" id="bold" class="format_btn">B</button>
+                    <button type="button" id="italic" class="format_btn">I</button>
+                    <button type="button" id="underline" class="format_btn">U</button>
+                </span>
+            </span>
+            <div id="file">
+
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
