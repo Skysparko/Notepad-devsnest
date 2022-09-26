@@ -33,6 +33,10 @@ main{
     
 }
 
+#new{
+    text-align: center;
+}
+
 form{
     position: absolute;
     top:0;
