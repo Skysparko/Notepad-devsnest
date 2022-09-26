@@ -15,18 +15,9 @@ let copybtn;
 
 add.addEventListener("click",function(){
     form.style.display="inline-flex";
-    console.log('yes');
     topic.focus();
 
 });
-
-// add.addEventListener("click",function(){
-
-//     form.style.display="inline-flex";
-//     console.log('yes');
-//     topic.focus();
-
-// });
 
 submit.addEventListener("click",function(){
     
@@ -34,31 +25,19 @@ submit.addEventListener("click",function(){
         alert("Please enter valid input");
     }
     else{
-        
-
-
-
         new_btn.classList.add("no-hover");
         
         new_btn.style.borderRadius="20px 0px 0px 20px"
 
         form.style.display="none";
-        // const btn = document.createElement("button");
-        // btn.textContent=topic.value;
-        // document.getElementById("new").appendChild(btn);
         nofile1.classList.remove("main_section");
         nofile1.classList.add("expand");
         
         
         const card = document.createElement("span");
-        // card.style.background="red";
         card.setAttribute("class","panel");
         card.setAttribute("id",i);
         document.getElementById("file").appendChild(card);
-
-
-        
-
 
         const newbutton= document.createElement("button");
         newbutton.setAttribute("class","new_button");
@@ -105,13 +84,7 @@ submit.addEventListener("click",function(){
         closebtn.innerHTML="&#x2715";
         closebtn.setAttribute("class","closebtn");
         closespan.appendChild(closebtn);
-        
-
-        // let cardclass = document.querySelectorAll('.card');
-        // let closeclass = document.querySelectorAll('.close');
-
-
-
+     
         closebtn.addEventListener('click', function(element) {
 
             // stuff to execute
@@ -120,24 +93,15 @@ submit.addEventListener("click",function(){
                 
         });
 
-        // document.getElementById(topic.value).style.display="block";
-        // card.style.display="none";
-        
-
-       
-        // document.getElementById("1").style.display="flex";
         const textarea = document.createElement("div");
         textarea.setAttribute("class","text")
         textarea.setAttribute("contenteditable","true")
         
         card.appendChild(textarea);
         textarea.focus();
-        // textarea.setAttribute("Placeholder","Write your note here......")
-        // main_topic.textContent= topic.value;
         copybtn.addEventListener("click",function(){
             document.execCommand('selectAll');
             document.execCommand('copy');
-            console.log("yes baby");
         })
         
 
@@ -155,7 +119,6 @@ submit.addEventListener("click",function(){
             textarea.focus();
             panels.forEach(panel => {
             panel.style.display = panel.id === e.target.dataset.panel ? 'flex' : 'none';
-            console.log("bye baby");
             });
             textarea.focus();
         }); 
@@ -167,56 +130,20 @@ submit.addEventListener("click",function(){
 });
 
 
-
-
-// search.addEventListener("input",function(){
-
-//     let inputval = search.value;
-//     let notescard = document.getElementsByClassName("card");
-//     console.log(inputval)
-//     Array.from(notescard).forEach(function (element) {
-//         let txt = element.getElementsByTagName("h1")[0].innerText
-
-//         if (txt.includes(inputval)) {
-//             element.style.display = "inline-flex"
-//         }
-//         else{
-//             element.style.display="none"
-//         }
-//     });
-// });
-
-
 const bold = document.getElementById("bold");
 const italic = document.getElementById("italic");
 const underline = document.getElementById("underline");
 
 bold.addEventListener("click",function(){
-
     document.execCommand('bold');
 })
 
 italic.addEventListener("click",function(){
     document.execCommand('italic');
-    // const   text = window.getSelection().toString();
-    // let btn = document.createElement('span');
-    // btn.innerHTML = text;
-    // btn.style.fontStyle = 'italic';
-    // document.execCommand('insertHTML', false, btn.outerHTML);
-
 })
-
-
 
 underline.addEventListener("click",function(){
     document.execCommand('underLine');
-
-    // const   text = window.getSelection().toString();
-    // let btn = document.createElement('span');
-    // btn.innerHTML = text;
-    // btn.style.textDecoration = 'underline';
-    // document.execCommand('insertHTML', false, btn.outerHTML);
-
 });
 
 
